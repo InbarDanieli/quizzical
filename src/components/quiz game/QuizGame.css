@@ -1,0 +1,40 @@
+.quizGame_container {
+  margin-left: 16%;
+  padding-top: 8%;
+}
+
+.quizGame_container * {
+  margin-left: 0;
+}
+
+.quizGame_container .yellow_blob {
+  width: 26%;
+  max-width: 300px;
+}
+
+.quizGame_container .blue_blob {
+  width: 16%;
+  left: -24px;
+  max-width: 200px;
+}
+
+.Button {
+  margin-top: 24px;
+  color: var(--bg);
+  background-color: var(--buttons_bg);
+  border-radius: 15px;
+  padding: 16px 40px;
+  border: none;
+  font-size: 1rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.displayScore {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 0.8rem;
+  padding-right: 24px;
+  color: var(--text_color);
+}

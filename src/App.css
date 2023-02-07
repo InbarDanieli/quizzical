@@ -1,38 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Karla:wght@700&display=swap");
+
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #f5f7fb;
+  --buttons_bg: #4d5b9e;
+  --text_color: #293264;
+  --ChooseTag: #d6dbf5;
+  --correctTag: #94d7a2;
+  --incorrectTag: #f8bcbc;
+  --border_color: #dbdef0;
+}
+
 .App {
+  height: 100vh;
+  background: #f5f7fb;
   text-align: center;
+  position: relative;
+  color: var(--text_color);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.blue_blob, .yellow_blob {
+  position: absolute;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.blue_blob {
+  bottom: 0;
+  left: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.yellow_blob {
+  top: 0;
+  right: 0;
 }

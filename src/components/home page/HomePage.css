@@ -1,0 +1,37 @@
+.HomePage_container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  font-family: karla, sans-serif;
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.description {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  margin-bottom: 32px;
+  font-weight: 400;
+}
+
+.startButton {
+  color: var(--bg);
+  background-color: var(--buttons_bg);
+  border-radius: 15px;
+  padding: 16px 60px;
+  border: none;
+  font-size: 1rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.HomePage_container img {
+  width: 30%;
+  max-width: 300px;
+}
