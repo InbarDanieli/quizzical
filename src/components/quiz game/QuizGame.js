@@ -9,17 +9,7 @@ export default function QuizGame() {
   const [FullSubmission, setFullSubmission] = useState(false)
   const [correctAnswersCounter, setCorrectAnswersCounter] = useState(0)
   const [resetGame, setResetGame] = useState(false)
-
-  // useEffect(() => {
-  //   getQuetions()
-  //     .then((res) => {
-  //       const resArr = []
-  //       res.forEach(value => {
-  //         resArr.push({ question: value.question, answers: randomizeOptions(value.correct_answer, value.incorrect_answers) })
-  //       });
-  //       setQuizQuestionsApi(resArr)
-  //     })
-  // }, [])
+  const [requireText, setRequireText] = useState("")
 
 
   useEffect(() => {
@@ -48,6 +38,12 @@ export default function QuizGame() {
         )
         setCorrectAnswersCounter(count)
       }
+    }
+    else {
+      setTimeout(() => {
+        setRequireText("")
+      }, 2000);
+      setRequireText("please fill all the required fields")
     }
   }
 
@@ -79,7 +75,8 @@ export default function QuizGame() {
         }
       </div>
       {FullSubmission && <span className='displayScore'>{`You scored ${correctAnswersCounter}/${quizQuestionsApi.length} correct answers`}</span>}
-      {FullSubmission ? <button onClick={()=> setResetGame(!resetGame)} className='Button'>Play again</button> : <button className='Button' onClick={submitHandler}>Check answers</button>}
+      {FullSubmission ? <button onClick={() => setResetGame(!resetGame)} className='Button'>Play again</button> : <button className='Button' onClick={submitHandler}>Check answers</button>}
+      <p>{requireText}</p>
     </div >
   )
 }
