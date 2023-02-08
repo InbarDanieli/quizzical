@@ -44,9 +44,9 @@ input[type="radio"]:checked + .optionLabel.incorrect {
 
 .bottom_border {
   margin-top: 18px;
-  width: 70%;
-  max-width: 400px;
+  width: 90%;
   height: 1px;
+  border: none;
   background: var(--border_color);
 }
 

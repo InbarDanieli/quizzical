@@ -1,6 +1,7 @@
 .quizGame_container {
-  margin-left: 16%;
   padding-top: 8%;
+  width: 80%;
+  max-width: 600px;
 }
 
 .quizGame_container * {
